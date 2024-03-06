@@ -10,7 +10,7 @@ hero:
     src: /background.svg
   actions:
     - theme: brand
-      text: 智趣播
+      text: 智播趣
       link: /ZBQ-main/index.html
       target: _self
     - theme: alt
