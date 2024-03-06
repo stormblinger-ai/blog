@@ -7,6 +7,8 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // aside: "left", // 设置右侧侧边栏在左侧显示
+    // logo
+    logo: '/logo.svg',
     // 搜索
     search: {
       provider: 'local'
@@ -24,8 +26,20 @@ export default defineConfig({
 
         ]
     },
-      { text: '鸿蒙', link: '/' },
-      { text: 'AI实战', link: '/' },
+      { text: '鸿蒙', 
+      items: [
+        {text: '测试',link: '/Python/index'},
+        
+      ]
+    },
+      { text: '全栈项目', items: [
+        {text: '测试',link: '/Python/index'},
+        
+      ] },
+      { text: '报错汇总', items: [
+        {text: '测试',link: '/Python/index'},
+        
+      ] },
       
     ],
     // 文章页侧边栏

@@ -18,10 +18,13 @@ hero:
       link: https://github.com/stormblinger-ai
 features:
   - title: Python视频课
-    details: www
+    details: 从Python开始
+    link: /Python-class
   - title: 鸿蒙视频课
-    details: 大大
+    details: 鸿蒙原生应用全面启动
+    link: /hms-class
   - title: Python项目实战
-    details: Lorem ipsum dolor sit amet
+    details: 解决方案助力开发者腾飞
+    link: /project-class
 ---
 
