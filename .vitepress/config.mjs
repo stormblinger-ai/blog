@@ -37,7 +37,7 @@ export default defineConfig({
         
       ] },
       { text: '报错汇总', items: [
-        {text: '测试',link: '/Python/index'},
+        {text: '常见问题',link: '/docs/bug'},
         
       ] },
       
