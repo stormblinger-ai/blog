@@ -65,7 +65,7 @@ export default defineConfig({
     }, // sidebar内容至此结束
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/stormblinger-ai' }
     ],
     footer: {
       copyright: "Copyright@ 2024 Brother Tui",
