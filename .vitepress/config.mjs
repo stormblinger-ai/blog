@@ -50,7 +50,7 @@ export default defineConfig({
           text: 'Python入门',
           collapsed: false,
           items: [
-            { text: 'Index', link: '/guide/' },
+            { text: 'Python是什么', link: '/Python/1' },
             { text: 'One', link: '/guide/one' },
             { text: 'Two', link: '/guide/two' }
           ]
