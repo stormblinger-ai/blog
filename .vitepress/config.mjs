@@ -51,8 +51,20 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Python是什么', link: '/Python/1' },
-            { text: 'One', link: '/guide/one' },
-            { text: 'Two', link: '/guide/two' }
+            { text: '在 Windows 和 Linux 上安装 Python', link: '/Python/2' },
+            { text: 'Python 语法', link: '/Python/3' },
+            { text: 'Python 关键字', link: '/Python/4' },
+            { text: 'Python 数据类型', link: '/Python/5' },
+            { text: 'Python 数字类型：整数、浮点数、复数', link: '/Python/6' },
+            { text: 'Python 字符串', link: '/Python/7' },
+            { text: 'Python 列表', link: '/Python/8' },
+            { text: 'Python 元组', link: '/Python/9' },
+            { text: 'Python 集合', link: '/Python/10' },
+            { text: 'Python 字典', link: '/Python/11' },
+            { text: 'Python if、elif、else条件', link: '/Python/12' },
+            { text: 'Python while循环', link: '/Python/13' },
+            { text: 'Python for循环', link: '/Python/14' },
+
           ]
         },
         {
