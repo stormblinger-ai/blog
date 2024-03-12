@@ -21,7 +21,6 @@ export default defineConfig({
           {text: 'python爬虫',link: '/Python-spider/index'},
           {text: 'python数据库操作',link: '/Python-db/index'},
           {text: 'python数据分析可视化',link: '/Python-datav/index'},
-          {text: 'python实战',link: '/Python-demo/index'},
 
 
         ]
@@ -33,7 +32,12 @@ export default defineConfig({
       ]
     },
       { text: '全栈项目', items: [
-        {text: '测试',link: '/Python/index'},
+        {text: '登录注册系统',link: '/Python-demo/基于Django2.2的注册登录管理系统'},
+        {text: '资产管理系统',link: '/Python-demo/资产管理系统'},
+        {text: '懂车帝可视化',link: '/Python-demo/懂车帝可视化'},
+
+        
+
         
       ] },
       { text: '报错汇总', items: [
@@ -94,18 +98,68 @@ export default defineConfig({
 
           ]
         },
+       
+      ], // Python目录
+      '/Python-db/': [
         {
-          text: 'Python学习方法',
+          text: 'Python数据库操作',
           collapsed: false,
           items: [
-            { text: 'Index', link: '/guide/' },
-            { text: 'One', link: '/guide/one' },
-            { text: 'Two', link: '/guide/two' }
+            { text: 'SQLAlchemy', link: '/Python-db/Python SQLAlchemy' },
+            { text: 'MySQL', link: '/Python-db/Python 操作 MySQL' },
+            { text: 'Redis', link: '/Python-db/Redis 数据库介绍' },
+            {text: 'SQLite', link: '/Python-db/SQLite'},
+            {text: 'Mongodb', link: '/Python-db/MongoDB'},
           ]
         },
-      ], // Python目录
-     
-      
+      ],
+      '/Python-demo/': [
+        {
+          text: "登录注册系统", 
+          collapsed: false,
+          items: [
+          {text: '说明', link: '/Python-demo/基于Django2.2的注册登录管理系统'},
+          {text: '1. 搭建项目环境', link: '/Python-demo/login1'},
+          {text: '2. 设计数据模型', link: '/Python-demo/login2'},
+          {text: '3. admin后台', link: '/Python-demo/login3'},
+          {text: '4. url路由和视图', link: '/Python-demo/login4'},
+          {text: '5. 前端页面设计', link: '/Python-demo/login5'},
+          {text: '6. 登录视图', link: '/Python-demo/login6'},
+          {text: '7. Django表单', link: '/Python-demo/login7'},
+          {text: '8. 图片验证码', link: '/Python-demo/login8'},
+          {text: '9. session会话', link: '/Python-demo/login9'},
+          {text: '10. 注册视图', link: '/Python-demo/login10'},
+          {text: '11.Django发送邮件', link: '/Python-demo/login11'},
+          {text: '12. 邮件注册确认', link: '/Python-demo/login12'},
+          
+          ]
+        },
+        {
+          text: "资产管理系统",
+          collapsed: false,
+          items: [
+            {text: '1.项目需求分析', link: '/Python-demo/CMDB1'},
+            {text: '2.模型设计', link: '/Python-demo/CMDB2'},
+            {text: '3.数据收集客户端', link: '/Python-demo/CMDB3'},
+            {text: '4.收集Windows数据', link: '/Python-demo/CMDB4'},
+            {text: '5.Linux下收集数据', link: '/Python-demo/CMDB5'},
+            {text: '6.新资产待审批区', link: '/Python-demo/CMDB6'},
+            {text: '7.审批新资产', link: '/Python-demo/CMDB7'},
+            {text: '8.已上线资产更新', link: '/Python-demo/CMDB8'},
+            {text: '9.前端框架AdminLTE', link: '/Python-demo/CMDB9'},
+            {text: '10.资产总表', link: '/Python-demo/CMDB10'},
+            {text: '11.资产详细页面', link: '/Python-demo/CMDB11'},
+            {text: '12.dashboard仪表盘', link: '/Python-demo/CMDB12'},
+
+          ]
+        },
+        {
+          text: '懂车帝可视化',
+          collapsed: false,
+          items: []
+        },
+        
+      ],
     }, // sidebar内容至此结束
 
     socialLinks: [
