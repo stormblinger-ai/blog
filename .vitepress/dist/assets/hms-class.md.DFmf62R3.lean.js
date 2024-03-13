@@ -1,0 +1,1 @@
+import{_ as s,c as e,o as t}from"./chunks/framework.BthLuVtL.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"hms-class.md","filePath":"hms-class.md"}'),a={name:"hms-class.md"};function c(r,o,n,m,l,p){return t(),e("div")}const i=s(a,[["render",c]]);export{d as __pageData,i as default};

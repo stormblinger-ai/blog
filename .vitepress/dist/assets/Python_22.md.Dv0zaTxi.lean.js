@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as t}from"./chunks/framework.BthLuVtL.js";const o=JSON.parse('{"title":"Python 错误类型","description":"","frontmatter":{},"headers":[],"relativePath":"Python/22.md","filePath":"Python/22.md"}'),n={name:"Python/22.md"},h=t("",50),l=[h];function p(k,e,r,d,E,g){return a(),i("div",null,l)}const F=s(n,[["render",p]]);export{o as __pageData,F as default};

@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as n}from"./chunks/framework.BthLuVtL.js";const c=JSON.parse('{"title":"Python 中的继承","description":"","frontmatter":{},"headers":[],"relativePath":"Python/26.md","filePath":"Python/26.md"}'),p={name:"Python/26.md"},h=n("",33),t=[h];function l(k,e,E,d,r,g){return a(),i("div",null,t)}const F=s(p,[["render",l]]);export{c as __pageData,F as default};

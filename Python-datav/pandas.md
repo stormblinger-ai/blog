@@ -55,7 +55,6 @@ Pandas 主要引入了两种新的数据结构：**DataFrame** 和 **Series**。
 
 - **DataFrame**： 类似于一个二维表格，它是 Pandas 中最重要的数据结构。DataFrame 可以看作是由多个 Series 按列排列构成的表格，它既有行索引也有列索引，因此可以方便地进行行列选择、过滤、合并等操作。
 
-  ![img](./pics/01_table_dataframe.svg+xml)
 
 **DataFrame 可视为由多个 Series 组成的数据结构：**
 
@@ -123,14 +122,14 @@ import pandas as pd
 ## 实例
 
 **import** pandas **as** pd
- 
+
  mydataset = {
   'sites': ["Google", "Runoob", "Wiki"],
   'number': [1, 2, 3]
  }
- 
+
  myvar = pd.DataFrame(mydataset)
- 
+
  **print**(myvar)
 
 执行以上代码，输出结果为：
@@ -169,11 +168,11 @@ pandas.Series( data, index, dtype, name, copy)
 ## 实例
 
 **import** pandas **as** pd
- 
+
  a = [1, 2, 3]
- 
+
  myvar = pd.Series(a)
- 
+
  **print**(myvar)
 
 输出结果如下：
@@ -185,11 +184,11 @@ pandas.Series( data, index, dtype, name, copy)
 ## 实例
 
 **import** pandas **as** pd
- 
+
  a = [1, 2, 3]
- 
+
  myvar = pd.Series(a)
- 
+
  **print**(myvar[1])
 
 输出结果如下：
@@ -203,11 +202,11 @@ pandas.Series( data, index, dtype, name, copy)
 ## 实例
 
 **import** pandas **as** pd
- 
+
  a = ["Google", "Runoob", "Wiki"]
- 
+
  myvar = pd.Series(a, index = ["x", "y", "z"])
- 
+
  **print**(myvar)
 
 输出结果如下：
@@ -219,11 +218,11 @@ pandas.Series( data, index, dtype, name, copy)
 ## 实例
 
 **import** pandas **as** pd
- 
+
  a = ["Google", "Runoob", "Wiki"]
- 
+
  myvar = pd.Series(a, index = ["x", "y", "z"])
- 
+
  **print**(myvar["y"])
 
 输出结果如下：
@@ -237,11 +236,11 @@ Runoob
 ## 实例
 
 **import** pandas **as** pd
- 
+
  sites = {1: "Google", 2: "Runoob", 3: "Wiki"}
- 
+
  myvar = pd.Series(sites)
- 
+
  **print**(myvar)
 
 输出结果如下：
@@ -255,11 +254,11 @@ Runoob
 ## 实例
 
 **import** pandas **as** pd
- 
+
  sites = {1: "Google", 2: "Runoob", 3: "Wiki"}
- 
+
  myvar = pd.Series(sites, index = [1, 2])
- 
+
  **print**(myvar)
 
 输出结果如下：
@@ -271,11 +270,11 @@ Runoob
 ## 实例
 
 **import** pandas **as** pd
- 
+
  sites = {1: "Google", 2: "Runoob", 3: "Wiki"}
- 
+
  myvar = pd.Series(sites, index = [1, 2], name="RUNOOB-Series-TEST" )
- 
+
  **print**(myvar)
 
 ![img](./pics/1FB6D419-06D7-4229-9148-1F4E79DE6ACF.jpg)
@@ -372,16 +371,16 @@ Pandas DataFrame 是一个二维的数组结构，类似二维数组。
 ## 实例 - 使用列表创建
 
 **import** pandas **as** pd
- 
+
  data = [['Google', 10], ['Runoob', 12], ['Wiki', 13]]
- 
+
  \# 创建DataFrame
  df = pd.DataFrame(data, columns=['Site', 'Age'])
- 
+
  \# 使用astype方法设置每列的数据类型
  df['Site'] = df['Site'].astype(str)
  df['Age'] = df['Age'].astype(float)
- 
+
  **print**(df)
 
 也可以使用字典来创建：
@@ -389,11 +388,11 @@ Pandas DataFrame 是一个二维的数组结构，类似二维数组。
 ## 实例 - 使用字典创建
 
 **import** pandas **as** pd
- 
+
  data = {'Site':['Google', 'Runoob', 'Wiki'], 'Age':[10, 12, 13]}
- 
+
  df = pd.DataFrame(data)
- 
+
  **print** (df)
 
 输出结果如下：
@@ -408,17 +407,17 @@ ndarrays 可以参考：[NumPy Ndarray 对象](https://www.runoob.com/numpy/nump
 
 **import** numpy **as** np
  **import** pandas **as** pd
- 
+
  \# 创建一个包含网站和年龄的二维ndarray
  ndarray_data = np.array([
    ['Google', 10],
    ['Runoob', 12],
    ['Wiki', 13]
  ])
- 
+
  \# 使用DataFrame构造函数创建数据帧
  df = pd.DataFrame(ndarray_data, columns=['Site', 'Age'])
- 
+
  \# 打印数据帧
  **print**(df)
 
@@ -435,11 +434,11 @@ ndarrays 可以参考：[NumPy Ndarray 对象](https://www.runoob.com/numpy/nump
 ## 实例 - 使用字典创建
 
 **import** pandas **as** pd
- 
+
  data = [{'a': 1, 'b': 2},{'a': 5, 'b': 10, 'c': 20}]
- 
+
  df = pd.DataFrame(data)
- 
+
  **print** (df)
 
 输出结果为：
@@ -457,15 +456,15 @@ Pandas 可以使用 loc 属性返回指定行的数据，如果没有设置索�
 ## 实例
 
 **import** pandas **as** pd
- 
+
  data = {
   "calories": [420, 380, 390],
   "duration": [50, 40, 45]
  }
- 
+
  \# 数据载入到 DataFrame 对象
  df = pd.DataFrame(data)
- 
+
  \# 返回第一行
  **print**(df.loc[0])
  \# 返回第二行
@@ -489,15 +488,15 @@ Name: 1, dtype: int64
 ## 实例
 
 **import** pandas **as** pd
- 
+
  data = {
   "calories": [420, 380, 390],
   "duration": [50, 40, 45]
  }
- 
+
  \# 数据载入到 DataFrame 对象
  df = pd.DataFrame(data)
- 
+
  \# 返回第一行和第二行
  **print**(df.loc[[0, 1]])
 
@@ -516,14 +515,14 @@ Name: 1, dtype: int64
 ## 实例
 
 **import** pandas **as** pd
- 
+
  data = {
   "calories": [420, 380, 390],
   "duration": [50, 40, 45]
  }
- 
+
  df = pd.DataFrame(data, index = ["day1", "day2", "day3"])
- 
+
  **print**(df) 
 
 输出结果为：
@@ -540,14 +539,14 @@ Pandas 可以使用 loc 属性返回指定索引对应到某一行：
 ## 实例
 
 **import** pandas **as** pd
- 
+
  data = {
   "calories": [420, 380, 390],
   "duration": [50, 40, 45]
  }
- 
+
  df = pd.DataFrame(data, index = ["day1", "day2", "day3"])
- 
+
  \# 指定索引
  **print**(df.loc["day2"])
 
@@ -643,9 +642,9 @@ Pandas 可以很方便的处理  CSV 文件，本文以 [nba.csv](https://static
 ## 实例
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('nba.csv')
- 
+
  **print**(df.to_string()) 
 
 to_string() 用于返回 DataFrame 类型的数据，如果不使用该函数，则输出结果为数据的前面 5 行和末尾 5 行，中间部分以 ... 代替。
@@ -653,9 +652,9 @@ to_string() 用于返回 DataFrame 类型的数据，如果不使用该函数，
 ## 实例
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('nba.csv')
- 
+
  **print**(df) 
 
 输出结果为：
@@ -680,17 +679,17 @@ to_string() 用于返回 DataFrame 类型的数据，如果不使用该函数，
 ## 实例
 
 **import** pandas **as** pd 
-   
+
  \# 三个字段 name, site, age
  nme = ["Google", "Runoob", "Taobao", "Wiki"]
  st = ["www.google.com", "www.runoob.com", "www.taobao.com", "www.wikipedia.org"]
  ag = [90, 40, 80, 98]
-   
+
  \# 字典
  dict = {'name': nme, 'site': st, 'age': ag} 
     
  df = pd.DataFrame(dict)
-  
+
  \# 保存 dataframe
  df.to_csv('site.csv')
 
@@ -709,9 +708,9 @@ head( *n* ) 方法用于读取前面的 n 行，如果不填参数 n ，默认�
 ## 实例 - 读取前面 5 行
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('nba.csv')
- 
+
  **print**(df.head())
 
 输出结果为：
@@ -728,9 +727,9 @@ head( *n* ) 方法用于读取前面的 n 行，如果不填参数 n ，默认�
 ## 实例 - 读取前面 10 行
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('nba.csv')
- 
+
  **print**(df.head(10))
 
 输出结果为：
@@ -756,9 +755,9 @@ head( *n* ) 方法用于读取前面的 n 行，如果不填参数 n ，默认�
 ## 实例 - 读取末尾 5 行
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('nba.csv')
- 
+
  **print**(df.tail())
 
 输出结果为：
@@ -775,9 +774,9 @@ head( *n* ) 方法用于读取前面的 n 行，如果不填参数 n ，默认�
 ## 实例 - 读取末尾 10 行
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('nba.csv')
- 
+
  **print**(df.tail(10))
 
 输出结果为：
@@ -803,9 +802,9 @@ info() 方法返回表格的一些基本信息：
 ## 实例
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('nba.csv')
- 
+
  **print**(df.info()) 
 
 输出结果为：
@@ -845,9 +844,9 @@ Pandas 可以很方便的处理  JSON 数据，本文以 [sites.json](https://st
 ## 实例
 
 **import** pandas **as** pd
- 
+
  df = pd.read_json('sites.json')
-   
+
  **print**(df.to_string()) 
 
 to_string() 用于返回 DataFrame 类型的数据，我们也可以直接处理 JSON 字符串。
@@ -855,7 +854,7 @@ to_string() 用于返回 DataFrame 类型的数据，我们也可以直接处理
 ## 实例
 
 **import** pandas **as** pd
- 
+
  data =[
    {
     "id": "A001",
@@ -877,7 +876,7 @@ to_string() 用于返回 DataFrame 类型的数据，我们也可以直接处理
    }
  ]
  df = pd.DataFrame(data)
- 
+
  **print**(df) 
 
 以上实例输出结果为：
@@ -894,14 +893,14 @@ JSON 对象与 Python 字典具有相同的格式，所以我们可以直接将 
 ## 实例
 
 **import** pandas **as** pd
- 
- 
+
+
  \# 字典格式的 JSON                                                
  s = {
    "col1":{"row1":1,"row2":2,"row3":3},
    "col2":{"row1":"x","row2":"y","row3":"z"}
  }
- 
+
  \# 读取 JSON 转为 DataFrame                                              
  df = pd.DataFrame(s)
  **print**(df)
@@ -920,7 +919,7 @@ row3     3    z
 ## 实例
 
 **import** pandas **as** pd
- 
+
  URL = 'https://static.jyshare.com/download/sites.json'
  df = pd.read_json(URL)
  **print**(df)
@@ -972,9 +971,9 @@ row3     3    z
 ## 实例
 
 **import** pandas **as** pd
- 
+
  df = pd.read_json('nested_list.json')
- 
+
  **print**(df)
 
 以上实例输出结果为：
@@ -992,11 +991,11 @@ row3     3    z
 
 **import** pandas **as** pd
  **import** json
- 
+
  \# 使用 Python JSON 模块载入数据
  **with** open('nested_list.json','r') **as** f:
    data = json.loads(f.read())
- 
+
  \# 展平数据
  df_nested_list = pd.json_normalize(data, record_path =['students'])
  **print**(df_nested_list)
@@ -1020,11 +1019,11 @@ json_normalize() 使用了参数 **record_path** 并设置为 **['students']** �
 
 **import** pandas **as** pd
  **import** json
- 
+
  \# 使用 Python JSON 模块载入数据
  **with** open('nested_list.json','r') **as** f:
    data = json.loads(f.read())
- 
+
  \# 展平数据
  df_nested_list = pd.json_normalize(
    data, 
@@ -1087,11 +1086,11 @@ nested_mix.json 文件转换为 DataFrame：
 
 **import** pandas **as** pd
  **import** json
- 
+
  \# 使用 Python JSON 模块载入数据
  **with** open('nested_mix.json','r') **as** f:
    data = json.loads(f.read())
-   
+
  df = pd.json_normalize(
    data, 
    record_path =['students'], 
@@ -1101,7 +1100,7 @@ nested_mix.json 文件转换为 DataFrame：
      ['info', 'contacts', 'tel']
    ]
  )
- 
+
  **print**(df)
 
 以上实例输出结果为：
@@ -1131,7 +1130,7 @@ nested_mix.json 文件转换为 DataFrame：
        "physics": 66,
        "chemistry": 61
      }
-  
+
    },
    {
      "id": "A002",
@@ -1166,9 +1165,9 @@ pip3 install glom
 
 **import** pandas **as** pd
  **from** glom **import** glom
- 
+
  df = pd.read_json('nested_deep.json')
- 
+
  data = df['students'].apply(**lambda** row: glom(row, 'grade.math'))
  **print**(data)
 
@@ -1223,9 +1222,9 @@ DataFrame.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
 ## 实例
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('property-data.csv')
- 
+
  **print** (df['NUM_BEDROOMS'])
  **print** (df['NUM_BEDROOMS'].isnull())
 
@@ -1238,10 +1237,10 @@ DataFrame.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
 ## 实例
 
 **import** pandas **as** pd
- 
+
  missing_values = ["n/a", "na", "--"]
  df = pd.read_csv('property-data.csv', na_values = missing_values)
- 
+
  **print** (df['NUM_BEDROOMS'])
  **print** (df['NUM_BEDROOMS'].isnull())
 
@@ -1254,11 +1253,11 @@ DataFrame.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
 ## 实例
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('property-data.csv')
- 
+
  new_df = df.dropna()
- 
+
  **print**(new_df.to_string())
 
 以上实例输出结果如下：
@@ -1272,11 +1271,11 @@ DataFrame.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
 ## 实例
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('property-data.csv')
- 
+
  df.dropna(inplace = True)
- 
+
  **print**(df.to_string())
 
 以上实例输出结果如下：
@@ -1290,11 +1289,11 @@ DataFrame.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
 移除 ST_NUM 列中字段值为空的行：
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('property-data.csv')
- 
+
  df.dropna(subset=['ST_NUM'], inplace = True)
- 
+
  **print**(df.to_string())
 
 以上实例输出结果如下：
@@ -1308,11 +1307,11 @@ DataFrame.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
 使用 12345 替换空字段： 
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('property-data.csv')
- 
+
  df.fillna(12345, inplace = True)
- 
+
  **print**(df.to_string())
 
 以上实例输出结果如下：
@@ -1326,11 +1325,11 @@ DataFrame.dropna(axis=0, how='any', thresh=None, subset=None, inplace=False)
 使用 12345 替换 PID 为空数据： 
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('property-data.csv')
- 
+
  df['PID'].fillna(12345, inplace = True)
- 
+
  **print**(df.to_string())
 
 以上实例输出结果如下：
@@ -1346,13 +1345,13 @@ Pandas使用 mean()、median() 和 mode() 方法计算列的均值（所有值�
 使用 mean() 方法计算列的均值并替换空单元格： 
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('property-data.csv')
- 
+
  x = df["ST_NUM"].mean()
- 
+
  df["ST_NUM"].fillna(x, inplace = True)
- 
+
  **print**(df.to_string())
 
 以上实例输出结果如下，红框为计算的均值替换来空单元格：
@@ -1364,13 +1363,13 @@ Pandas使用 mean()、median() 和 mode() 方法计算列的均值（所有值�
 使用 median() 方法计算列的中位数并替换空单元格： 
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('property-data.csv')
- 
+
  x = df["ST_NUM"].median()
- 
+
  df["ST_NUM"].fillna(x, inplace = True)
- 
+
  **print**(df.to_string())
 
 以上实例输出结果如下，红框为计算的中位数替换来空单元格：
@@ -1382,13 +1381,13 @@ Pandas使用 mean()、median() 和 mode() 方法计算列的均值（所有值�
 使用 mode() 方法计算列的众数并替换空单元格： 
 
 **import** pandas **as** pd
- 
+
  df = pd.read_csv('property-data.csv')
- 
+
  x = df["ST_NUM"].mode()
- 
+
  df["ST_NUM"].fillna(x, inplace = True)
- 
+
  **print**(df.to_string())
 
 以上实例输出结果如下，红框为计算的众数替换来空单元格：
@@ -1408,17 +1407,17 @@ Pandas使用 mean()、median() 和 mode() 方法计算列的均值（所有值�
 ## 实例
 
 **import** pandas **as** pd
- 
+
  \# 第三个日期格式错误
  data = {
   "Date": ['2020/12/01', '2020/12/02' , '20201226'],
   "duration": [50, 40, 45]
  }
- 
+
  df = pd.DataFrame(data, index = ["day1", "day2", "day3"])
- 
+
  df['Date'] = pd.to_datetime(df['Date'])
- 
+
  **print**(df.to_string())
 
 以上实例输出结果如下：
@@ -1441,16 +1440,16 @@ day3 2020-12-26        45
 ## 实例
 
 **import** pandas **as** pd
- 
+
  person = {
   "name": ['Google', 'Runoob' , 'Taobao'],
   "age": [50, 40, 12345]   # 12345 年龄数据是错误的
  }
- 
+
  df = pd.DataFrame(person)
- 
+
  df.loc[2, 'age'] = 30 # 修改数据
- 
+
  **print**(df.to_string())
 
 以上实例输出结果如下：
@@ -1469,18 +1468,18 @@ day3 2020-12-26        45
 将 age 大于 120 的设置为 120:
 
 **import** pandas **as** pd
- 
+
  person = {
   "name": ['Google', 'Runoob' , 'Taobao'],
   "age": [50, 200, 12345]   
  }
- 
+
  df = pd.DataFrame(person)
- 
+
  **for** x **in** df.index:
   **if** df.loc[x, "age"] > 120:
    df.loc[x, "age"] = 120
- 
+
  **print**(df.to_string())
 
 以上实例输出结果如下：
@@ -1499,18 +1498,18 @@ day3 2020-12-26        45
 将 age 大于 120 的删除:
 
 **import** pandas **as** pd
- 
+
  person = {
   "name": ['Google', 'Runoob' , 'Taobao'],
   "age": [50, 40, 12345]   # 12345 年龄数据是错误的
  }
- 
+
  df = pd.DataFrame(person)
- 
+
  **for** x **in** df.index:
   **if** df.loc[x, "age"] > 120:
    df.drop(x, inplace = True)
- 
+
  **print**(df.to_string())
 
 以上实例输出结果如下：
@@ -1532,13 +1531,13 @@ day3 2020-12-26        45
 ## 实例
 
 **import** pandas **as** pd
- 
+
  person = {
   "name": ['Google', 'Runoob', 'Runoob', 'Taobao'],
   "age": [50, 40, 40, 23]  
  }
  df = pd.DataFrame(person)
- 
+
  **print**(df.duplicated())
 
 以上实例输出结果如下：
@@ -1556,14 +1555,14 @@ dtype: bool
 ## 实例
 
 **import** pandas **as** pd
- 
+
  persons = {
   "name": ['Google', 'Runoob', 'Runoob', 'Taobao'],
   "age": [50, 40, 40, 23]  
  }
- 
+
  df = pd.DataFrame(persons)
- 
+
  df.drop_duplicates(inplace = True)
  **print**(df)
 
@@ -1593,22 +1592,22 @@ dtype: bool
 ## 实例
 
 **import** pandas **as** pd
- 
+
  \# 从 CSV 文件中读取数据
  df = pd.read_csv('data.csv')
- 
+
  \# 从 Excel 文件中读取数据
  df = pd.read_excel('data.xlsx')
- 
+
  \# 从 SQL 数据库中读取数据
  **import** sqlite3
  conn = sqlite3.connect('database.db')
  df = pd.read_sql('SELECT * FROM table_name', conn)
- 
+
  \# 从 JSON 字符串中读取数据
  json_string = '{"name": "John", "age": 30, "city": "New York"}'
  df = pd.read_json(json_string)
- 
+
  \# 从 HTML 页面中读取数据
  url = 'https://www.runoob.com'
  dfs = pd.read_html(url)
@@ -1630,29 +1629,29 @@ dtype: bool
 
 \# 显示前五行数据
  df.head()
- 
+
  \# 显示后五行数据
  df.tail()
- 
+
  \# 显示数据信息
  df.info()
- 
+
  \# 显示基本统计信息
  df.describe()
- 
+
  \# 显示数据的行数和列数
  df.shape
 
 ## 实例
 
 **import** pandas **as** pd
- 
+
  data = [
    {"name": "Google", "likes": 25, "url": "https://www.google.com"},
    {"name": "Runoob", "likes": 30, "url": "https://www.runoob.com"},
    {"name": "Taobao", "likes": 35, "url": "https://www.taobao.com"}
  ]
- 
+
  df = pd.DataFrame(data)
  \# 显示前两行数据
  **print**(df.head(2))
@@ -1685,16 +1684,16 @@ dtype: bool
 
 \# 删除包含缺失值的行或列
  df.dropna()
- 
+
  \# 将缺失值替换为指定的值
  df.fillna(0)
- 
+
  \# 将指定值替换为新值
  df.replace('old_value', 'new_value')
- 
+
  \# 检查是否有重复的数据
  df.duplicated()
- 
+
  \# 删除重复的数据
  df.drop_duplicates()
 
@@ -1716,22 +1715,22 @@ dtype: bool
 
 \# 选择指定的列
  df['column_name']
- 
+
  \# 通过标签选择数据
  df.loc[row_index, column_name]
- 
+
  \# 通过位置选择数据
  df.iloc[row_index, column_index]
- 
+
  \# 通过标签或位置选择数据
  df.ix[row_index, column_name]
- 
+
  \# 选择指定的列
  df.filter(items=['column_name1', 'column_name2'])
- 
+
  \# 选择列名匹配正则表达式的列
  df.filter(regex='regex')
- 
+
  \# 随机选择 n 行数据
  df.sample(n=5)
 
@@ -1749,10 +1748,10 @@ dtype: bool
 
 \# 按照指定列的值排序
  df.sort_values('column_name')
- 
+
  \# 按照多个列的值排序
  df.sort_values(['column_name1', 'column_name2'], ascending=[True, False])
- 
+
  \# 按照索引排序
  df.sort_index()
 
@@ -1770,10 +1769,10 @@ dtype: bool
 
 \# 按照指定列进行分组
  df.groupby('column_name')
- 
+
  \# 对分组后的数据进行聚合操作
  df.aggregate('function_name')
- 
+
  \# 生成透视表
  df.pivot_table(values='value', index='index_column', columns='column_name', aggfunc='function_name')
 
@@ -1790,7 +1789,7 @@ dtype: bool
 
 \# 将多个数据框按照行或列进行合并
  df = pd.concat([df1, df2])
- 
+
  \# 按照指定列将两个数据框进行合并
  df = pd.merge(df1, df2, on='column_name')
 
@@ -1857,40 +1856,40 @@ dtype: bool
 ## 实例
 
 **import** pandas **as** pd
- 
+
  \# 读取 JSON 数据
  df = pd.read_json('data.json')
- 
+
  \# 删除缺失值
  df = df.dropna()
- 
+
  \# 用指定的值填充缺失值
  df = df.fillna({'age': 0, 'score': 0})
- 
+
  \# 重命名列名
  df = df.rename(columns={'name': '姓名', 'age': '年龄', 'gender': '性别', 'score': '成绩'})
- 
+
  \# 按成绩排序
  df = df.sort_values(by='成绩', ascending=False)
- 
+
  \# 按性别分组并计算平均年龄和成绩
  grouped = df.groupby('性别').agg({'年龄': 'mean', '成绩': 'mean'})
- 
+
  \# 选择成绩大于等于90的行，并只保留姓名和成绩两列
  df = df.loc[df['成绩'] >= 90, ['姓名', '成绩']]
- 
+
  \# 计算每列的基本统计信息
  stats = df.describe()
- 
+
  \# 计算每列的平均值
  mean = df.mean()
- 
+
  \# 计算每列的中位数
  median = df.median()
- 
+
  \# 计算每列的众数
  mode = df.mode()
- 
+
  \# 计算每列非缺失值的数量
  count = df.count()
 
@@ -1963,11 +1962,11 @@ df.corr() 方法返回一个相关系数矩阵，矩阵的行和列对应数据�
 ## 实例
 
 **import** pandas **as** pd
- 
+
  \# 创建一个示例数据框
  data = {'A': [1, 2, 3, 4, 5], 'B': [5, 4, 3, 2, 1]}
  df = pd.DataFrame(data)
- 
+
  \# 计算 Pearson 相关系数
  correlation_matrix = df.corr()
  **print**(correlation_matrix)
@@ -1987,11 +1986,11 @@ B -1.0  1.0
 ## 实例
 
 **import** pandas **as** pd
- 
+
  \# 创建一个示例数据框
  data = {'A': [1, 2, 3, 4, 5], 'B': [5, 4, 3, 2, 1]}
  df = pd.DataFrame(data)
- 
+
  \# 计算 Spearman 相关系数
  spearman_correlation_matrix = df.corr(method='spearman')
  **print**(spearman_correlation_matrix)
@@ -2023,11 +2022,11 @@ pip install seaborn
 **import** seaborn **as** sns
  **import** matplotlib.pyplot **as** plt
  **import** pandas **as** pd
- 
+
  \# 创建一个示例数据框
  data = {'A': [1, 2, 3, 4, 5], 'B': [5, 4, 3, 2, 1]}
  df = pd.DataFrame(data)
- 
+
  \# 计算 Pearson 相关系数
  correlation_matrix = df.corr()
  \# 使用热图可视化 Pearson 相关系数

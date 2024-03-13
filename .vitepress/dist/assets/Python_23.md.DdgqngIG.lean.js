@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as n}from"./chunks/framework.BthLuVtL.js";const c=JSON.parse('{"title":"Python 中的异常处理","description":"","frontmatter":{},"headers":[],"relativePath":"Python/23.md","filePath":"Python/23.md"}'),p={name:"Python/23.md"},h=n("",52),t=[h];function l(k,e,E,r,d,y){return a(),i("div",null,t)}const o=s(p,[["render",l]]);export{c as __pageData,o as default};

@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as n}from"./chunks/framework.BthLuVtL.js";const c=JSON.parse('{"title":"Python 生成器函数","description":"","frontmatter":{},"headers":[],"relativePath":"Python/19.md","filePath":"Python/19.md"}'),p={name:"Python/19.md"},t=n("",47),h=[t];function l(e,k,d,E,r,g){return a(),i("div",null,h)}const o=s(p,[["render",l]]);export{c as __pageData,o as default};

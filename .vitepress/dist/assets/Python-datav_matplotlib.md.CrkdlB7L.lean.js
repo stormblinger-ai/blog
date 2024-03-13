@@ -1,0 +1,1 @@
+import{_ as t,c as a,o as e}from"./chunks/framework.BthLuVtL.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"Python-datav/matplotlib.md","filePath":"Python-datav/matplotlib.md"}'),o={name:"Python-datav/matplotlib.md"};function n(r,s,c,l,p,i){return e(),a("div")}const _=t(o,[["render",n]]);export{m as __pageData,_ as default};

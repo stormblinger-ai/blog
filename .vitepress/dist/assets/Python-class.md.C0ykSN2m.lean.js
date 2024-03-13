@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a}from"./chunks/framework.BthLuVtL.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"Python-class.md","filePath":"Python-class.md"}'),s={name:"Python-class.md"};function o(n,c,r,l,p,_){return a(),e("div")}const m=t(s,[["render",o]]);export{i as __pageData,m as default};

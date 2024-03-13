@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as n}from"./chunks/framework.BthLuVtL.js";const y=JSON.parse('{"title":"Python 中的变量作用域","description":"","frontmatter":{},"headers":[],"relativePath":"Python/17.md","filePath":"Python/17.md"}'),p={name:"Python/17.md"},l=n("",30),t=[l];function e(h,k,d,E,g,r){return a(),i("div",null,t)}const o=s(p,[["render",e]]);export{y as __pageData,o as default};

@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as n}from"./chunks/framework.BthLuVtL.js";const o=JSON.parse('{"title":"Python 函数","description":"","frontmatter":{},"headers":[],"relativePath":"Python/15.md","filePath":"Python/15.md"}'),p={name:"Python/15.md"},t=n("",89),h=[t];function l(e,k,E,d,r,g){return a(),i("div",null,h)}const c=s(p,[["render",l]]);export{o as __pageData,c as default};

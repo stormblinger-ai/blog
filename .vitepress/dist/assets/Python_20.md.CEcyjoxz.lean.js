@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as h}from"./chunks/framework.BthLuVtL.js";const F=JSON.parse('{"title":"python 列表推导","description":"","frontmatter":{},"headers":[],"relativePath":"Python/20.md","filePath":"Python/20.md"}'),k={name:"Python/20.md"},p=h("",54),n=[p];function t(l,e,E,d,r,g){return a(),i("div",null,n)}const C=s(k,[["render",t]]);export{F as __pageData,C as default};

@@ -1,0 +1,30 @@
+import{_ as a,c as s,o as n,a5 as p}from"./chunks/framework.BthLuVtL.js";const e="/assets/103-1-1710231513948-19.BWfCiLCp.png",t="/assets/103-2-1710231513950-20.DCBsz3-Y.png",i="/assets/103-3-1710231513950-21.BVmP1bMG.png",l="/assets/103-4-1710231513950-22.BUfRAMMk.png",o="/assets/103-5-1710231513951-23.D8Orv5QX.png",c="/assets/103-6-1710231513951-24.CGKp8tem.png",r="/assets/103-7-1710231513951-25.BdulA6Pm.png",h="/assets/103-8-1710231513952-26.CKFRYygt.png",d="/assets/103-9-1710231513952-27.BPKI8CLF.png",k=JSON.parse('{"title":"1. 搭建项目环境","description":"","frontmatter":{},"headers":[],"relativePath":"python-demo/login1.md","filePath":"python-demo/login1.md"}'),m={name:"python-demo/login1.md"},g=p('<h1 id="_1-搭建项目环境" tabindex="-1">1. 搭建项目环境 <a class="header-anchor" href="#_1-搭建项目环境" aria-label="Permalink to &quot;1. 搭建项目环境&quot;">​</a></h1><hr><h2 id="一、创建工程" tabindex="-1">一、创建工程 <a class="header-anchor" href="#一、创建工程" aria-label="Permalink to &quot;一、创建工程&quot;">​</a></h2><p>当前，较新的Pycharm版本都支持同时创建虚拟环境和Django工程。所以我们下面的操作都在Pycharm中进行。</p><p>首先打开Pycharm，进入创建工程的对话框，注意下面的红框提示：</p><p><img src="'+e+'" alt="image"></p><ul><li>在Location处选择工程目录</li><li>在New environment using处选择Virtualenv（这可能需要你提前pip install virtualenv进行虚拟工具virtualenv的安装）。通常情况下，虚拟环境会以venv的名字，自动在工程目录下生成。</li><li>在Base interpreter处，选择你要使用的Python解释器</li><li>下面两个单选框，根据需要自行选择</li><li>如果想使用现成的解释器或者虚拟环境，请选择Existing interpreter</li></ul><p><img src="'+t+'" alt="image"></p><p>再点开下方的More Settings：</p><ul><li>Template language选择使用的模板语言，默认Django就行，可选Jinjia。</li><li>Templates folder：Pycharm安利给我们的功能，额外创建一个工程级别的模板文件的保存目录，可以不设置，空着，这里使用默认设置吧。</li><li>启用Admin，一般勾上。</li></ul><p><img src="'+i+'" alt="image"></p><p>没什么问题了，就点击Create吧。</p><p>下面就是一段时间的等待，Pycharm会帮助我们自动创建虚拟环境，以及安装最新版本的Django。</p><p>创建完成之后，进入Pycharm的设置菜单，可以看到当前Django版本是最新的2.2版本。如果你要指定过去的版本，比如2.1、1.11等，那就不能这么操作了，需要在命令行下自己创建虚拟环境并安装django。或者在这里先删除Django，再安装你想要的指定版本。</p><p><img src="'+l+'" alt="image"></p><p>看下我们当前的状态，注意venv这个虚拟环境目录，以及我们额外创建的templats目录：</p><p><img src="'+o+`" alt="image"></p><h2 id="二、创建app" tabindex="-1">二、创建app <a class="header-anchor" href="#二、创建app" aria-label="Permalink to &quot;二、创建app&quot;">​</a></h2><p>点击Pycharm最下方工具栏中的Terminal按钮，进入终端界面，可以看到，我们已经在工程的根目录下，并且自动进入了虚拟环境内。（如果你不是通过Pycharm创建的虚拟环境，那么在这里，你可能需要手动激活虚拟环境。）</p><p>使用<code>where python</code>和<code>python -V</code>查看一下环境：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>(venv) D:\\work\\2019\\for_test\\mysite&gt;where python</span></span>
+<span class="line"><span>D:\\work\\2019\\for_test\\mysite\\venv\\Scripts\\python.exe</span></span>
+<span class="line"><span>C:\\Program Files\\Python37\\python.exe</span></span>
+<span class="line"><span>C:\\Program Files\\Python36\\python.exe</span></span>
+<span class="line"><span>C:\\Users\\feixuelym\\Anaconda3\\python.exe</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>(venv) D:\\work\\2019\\for_test\\mysite&gt;python -V</span></span>
+<span class="line"><span>Python 3.7.3</span></span></code></pre></div><p>接下来运行<code>python manage.py startapp login</code>创建login这个app。</p><p>按照上面的步骤操作完后，login应用就创建成功了，让我们看一下Pycharm中的目录结构：</p><p><img src="`+c+`" alt="image"></p><h2 id="三、-设置时区和语言" tabindex="-1">三、 设置时区和语言 <a class="header-anchor" href="#三、-设置时区和语言" aria-label="Permalink to &quot;三、 设置时区和语言&quot;">​</a></h2><p>Django默认使用美国时间和英语，在项目的settings文件中，如下所示：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span># Internationalization</span></span>
+<span class="line"><span># https://docs.djangoproject.com/en/1.11/topics/i18n/</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>LANGUAGE_CODE = &#39;en-us&#39;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>TIME_ZONE = &#39;UTC&#39;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>USE_I18N = True</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>USE_L10N = True</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>USE_TZ = True</span></span></code></pre></div><p>我们把它改为<code>亚洲/上海</code>时间和中文（别问我为什么没有北京时间，也别把语言写成<code>zh-CN</code>），注意USE_TZ 改成False了。</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span># Internationalization</span></span>
+<span class="line"><span># https://docs.djangoproject.com/en/1.11/topics/i18n/</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>LANGUAGE_CODE = &#39;zh-hans&#39;     # 这里修改了</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>TIME_ZONE = &#39;Asia/Shanghai&#39;    # 这里修改了</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>USE_I18N = True</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>USE_L10N = True</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>USE_TZ = False    # 这里修改了</span></span></code></pre></div><h2 id="四、-启动开发服务器" tabindex="-1">四、 启动开发服务器 <a class="header-anchor" href="#四、-启动开发服务器" aria-label="Permalink to &quot;四、 启动开发服务器&quot;">​</a></h2><p>现在，我们可以启动一下开发服务器，测试一下我们的工程了。</p><p>在Pycharm的<code>Run/Debug Configurations</code>配置界面里，将HOST设置为<code>127.0.0.1</code>，Port保持原样的<code>8000</code>，确定后，点击绿色三角，走你！</p><p><img src="`+r+'" alt="image"></p><p>在本机的浏览器中访问<code>http://127.0.0.1:8000/</code>，或者点击Pycharm界面里的链接：</p><p><img src="'+h+'" alt="image"></p><p>顺利的话，在浏览器中，你可以看到如下的欢迎界面：</p><p><img src="'+d+'" alt="image"></p><hr>',38),_=[g];function u(y,v,P,b,C,f){return n(),s("div",null,_)}const E=a(m,[["render",u]]);export{k as __pageData,E as default};
