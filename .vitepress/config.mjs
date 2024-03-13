@@ -31,12 +31,11 @@ export default defineConfig({
         
       ]
     },
-      { text: '全栈项目', items: [
+      { text: '全栈项目',
+        items: [
         {text: '登录注册系统',link: '/Python-demo/基于Django2.2的注册登录管理系统'},
         {text: '资产管理系统',link: '/Python-demo/资产管理系统'},
         {text: '懂车帝可视化',link: '/Python-demo/懂车帝可视化'},
-
-        
 
         
       ] },
