@@ -33,9 +33,9 @@ export default defineConfig({
     },
       { text: '全栈项目',
         items: [
-        {text: '登录注册系统',link: '/python-demo/基于Django2.2的注册登录管理系统'},
-        {text: '资产管理系统',link: '/python-demo/资产管理系统'},
-        {text: '懂车帝可视化',link: '/python-demo/懂车帝可视化'},
+        {text: '登录注册系统',link: '/python-demo/reg-log'},
+        {text: '资产管理系统',link: '/python-demo/AMC'},
+        {text: '懂车帝可视化',link: '/python-demo/懂车帝'},
 
         
       ] },
@@ -134,8 +134,8 @@ export default defineConfig({
           {text: '5. 前端页面设计', link: '/python-demo/login5'},
           {text: '6. 登录视图', link: '/python-demo/login6'},
           {text: '7. Django表单', link: '/python-demo/login7'},
-          {text: '8. 图片验证码', link: '/python-demo/login8'},
-          {text: '9. session会话', link: '/python-demo/login9'},
+          // {text: '8. 图片验证码', link: '/python-demo/login8'},
+          // {text: '9. session会话', link: '/python-demo/login9'},
           {text: '10. 注册视图', link: '/python-demo/login10'},
           {text: '11.Django发送邮件', link: '/python-demo/login11'},
           {text: '12. 邮件注册确认', link: '/python-demo/login12'},
