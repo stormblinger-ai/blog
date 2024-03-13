@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as t,a5 as i}from"./chunks/framework.BthLuVtL.js";const b=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/bug.md","filePath":"docs/bug.md"}'),s={name:"docs/bug.md"},n=i("",7),l=[n];function o(c,r,p,d,g,h){return t(),e("div",null,l)}const _=a(s,[["render",o]]);export{b as __pageData,_ as default};

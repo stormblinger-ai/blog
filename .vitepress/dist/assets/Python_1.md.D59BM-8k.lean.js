@@ -1,1 +1,0 @@
-import{_ as t,c as o,o as a,a5 as n}from"./chunks/framework.BthLuVtL.js";const _=JSON.parse('{"title":"Python 是什么？","description":"","frontmatter":{},"headers":[],"relativePath":"Python/1.md","filePath":"Python/1.md"}'),i={name:"Python/1.md"},l=n("",12),e=[l];function h(r,y,P,s,c,p){return a(),o("div",null,e)}const u=t(i,[["render",h]]);export{_ as __pageData,u as default};

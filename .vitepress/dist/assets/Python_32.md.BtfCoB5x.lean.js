@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a5 as t}from"./chunks/framework.BthLuVtL.js";const F=JSON.parse('{"title":"Python 魔术或邓德方法","description":"","frontmatter":{},"headers":[],"relativePath":"Python/32.md","filePath":"Python/32.md"}'),h={name:"Python/32.md"},n=t("",49),k=[n];function l(p,e,d,E,r,g){return a(),i("div",null,k)}const _=s(h,[["render",l]]);export{F as __pageData,_ as default};

@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a5 as n}from"./chunks/framework.BthLuVtL.js";const F=JSON.parse('{"title":"Python 中的递归","description":"","frontmatter":{},"headers":[],"relativePath":"Python/21.md","filePath":"Python/21.md"}'),h={name:"Python/21.md"},p=n("",12),t=[p];function k(l,e,E,r,d,g){return a(),i("div",null,t)}const C=s(h,[["render",k]]);export{F as __pageData,C as default};
