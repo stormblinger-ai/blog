@@ -18,14 +18,14 @@
 
 在AdminLTE中，集成了datatables插件，无需额外下载和安装，直接引入使用就可以。
 
-下面给出一个完整的index.html模板代码：
+下面给出一个完整的index.html模板代码： 
 
-```
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}资产总表{% endblock %}
+```python
+//{% extends 'base.html' %}
+//{% load static %}
+//{% block title %}资产总表{% endblock %}
 
-{% block css %}
+//{% block css %}
  <link rel="stylesheet" href="{% static 'adminlet-2.4.10/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css' %}">
 {% endblock %}
 
@@ -157,7 +157,7 @@
 <script src="{% static 'adminlet-2.4.10/bower_components/datatables.net/js/jquery.dataTables.min.js' %}"></script>
 <script src="{% static 'adminlet-2.4.10/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js' %}"></script>
 
-<script>
+//<script>
 $(function () {
         $('#assets_table').DataTable({
           "paging": true,       <!-- 允许分页 -->
@@ -172,16 +172,9 @@ $(function () {
 
 
 {% endblock %}
-```
-
-**首先我们导入了datatables需要的CSS和JS文件。**
-
-主要是新增了表格相关的html代码和初始化表格的js代码。
-
+首先我们导入datatables 需要的CSS和JS文件。主要是新增了表格相关的html代码和初始化表格的js代码。
 <table id="assets_table" class="table table-bordered table-striped">中的id属性非常重要，用于关联相应的初始化js代码。
-
 表格中，循环每一个资产：
-
 - 首先生成一个排序的列；
 - 再根据资产类型的不同，用不同的颜色生成不同的资产类型名和子类型名；
 - 通过`{{ asset.get_asset_type_display }}`的模板语法，拿到资产类型的直观名称，比如‘服务器’，而不是显示呆板的‘server’；
@@ -191,6 +184,9 @@ $(function () {
 - 利用`{{ asset.m_time|date:"Y/m/d [H:m:s]" }}`调整时间的显示格式；
 - 由于资产和tas标签属于多对多的关系，所以需要一个循环，遍历每个tas并打印其名称；
 - 通过`asset.tags.all`可以获取一个资产对应的多对多字段的全部对象，很类似ORM的做法。
+
+
+```
 
 表格的初始化JS代码如下：
 

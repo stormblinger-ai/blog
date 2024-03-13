@@ -225,5 +225,3 @@ Django的模板语言`{% if xxx %}{% endif %}`非常类似Python的if语句，�
 ![image](./pics/108-4.png)
 
 ![image](./pics/108-5.png)
-
-------

@@ -18,7 +18,7 @@ export default defineConfig({
       { text: 'python', 
         items: [
           {text: 'python基础',link: '/Python/index'},
-          {text: 'python爬虫',link: '/Python-spider/index'},
+          // {text: 'python爬虫',link: '/Python-spider/index'},
           {text: 'python数据库操作',link: '/Python-db/index'},
           {text: 'python数据分析可视化',link: '/Python-datav/index'},
 
@@ -27,15 +27,15 @@ export default defineConfig({
     },
       { text: '鸿蒙', 
       items: [
-        {text: '测试',link: '/Python/index'},
+        {text: '文档',link: '/hms'},
         
       ]
     },
       { text: '全栈项目',
         items: [
-        {text: '登录注册系统',link: '/Python-demo/基于Django2.2的注册登录管理系统'},
-        {text: '资产管理系统',link: '/Python-demo/资产管理系统'},
-        {text: '懂车帝可视化',link: '/Python-demo/懂车帝可视化'},
+        {text: '登录注册系统',link: '/python-demo/基于Django2.2的注册登录管理系统'},
+        {text: '资产管理系统',link: '/python-demo/资产管理系统'},
+        {text: '懂车帝可视化',link: '/python-demo/懂车帝可视化'},
 
         
       ] },
@@ -112,24 +112,33 @@ export default defineConfig({
           ]
         },
       ],
-      '/Python-demo/': [
+      '/Python-datav':[
+        {text:'python数据分析基础',
+         collapsed: false,
+         items: [
+          { text: 'numpy教程', link: '/Python-datav/numpy' },
+          { text: 'pandas教程', link: '/Python-datav/pandas' },
+         ] 
+      },
+      ],
+      '/python-demo/': [
         {
           text: "登录注册系统", 
           collapsed: false,
           items: [
-          {text: '说明', link: '/Python-demo/基于Django2.2的注册登录管理系统'},
-          {text: '1. 搭建项目环境', link: '/Python-demo/login1'},
-          {text: '2. 设计数据模型', link: '/Python-demo/login2'},
-          {text: '3. admin后台', link: '/Python-demo/login3'},
-          {text: '4. url路由和视图', link: '/Python-demo/login4'},
-          {text: '5. 前端页面设计', link: '/Python-demo/login5'},
-          {text: '6. 登录视图', link: '/Python-demo/login6'},
-          {text: '7. Django表单', link: '/Python-demo/login7'},
-          {text: '8. 图片验证码', link: '/Python-demo/login8'},
-          {text: '9. session会话', link: '/Python-demo/login9'},
-          {text: '10. 注册视图', link: '/Python-demo/login10'},
-          {text: '11.Django发送邮件', link: '/Python-demo/login11'},
-          {text: '12. 邮件注册确认', link: '/Python-demo/login12'},
+          {text: '说明', link: '/python-demo/基于Django2.2的注册登录管理系统'},
+          {text: '1. 搭建项目环境', link: '/python-demo/login1'},
+          {text: '2. 设计数据模型', link: '/python-demo/login2'},
+          {text: '3. admin后台', link: '/python-demo/login3'},
+          {text: '4. url路由和视图', link: '/python-demo/login4'},
+          {text: '5. 前端页面设计', link: '/python-demo/login5'},
+          {text: '6. 登录视图', link: '/python-demo/login6'},
+          {text: '7. Django表单', link: '/python-demo/login7'},
+          {text: '8. 图片验证码', link: '/python-demo/login8'},
+          {text: '9. session会话', link: '/python-demo/login9'},
+          {text: '10. 注册视图', link: '/python-demo/login10'},
+          {text: '11.Django发送邮件', link: '/python-demo/login11'},
+          {text: '12. 邮件注册确认', link: '/python-demo/login12'},
           
           ]
         },
@@ -137,18 +146,18 @@ export default defineConfig({
           text: "资产管理系统",
           collapsed: false,
           items: [
-            {text: '1.项目需求分析', link: '/Python-demo/CMDB1'},
-            {text: '2.模型设计', link: '/Python-demo/CMDB2'},
-            {text: '3.数据收集客户端', link: '/Python-demo/CMDB3'},
-            {text: '4.收集Windows数据', link: '/Python-demo/CMDB4'},
-            {text: '5.Linux下收集数据', link: '/Python-demo/CMDB5'},
-            {text: '6.新资产待审批区', link: '/Python-demo/CMDB6'},
-            {text: '7.审批新资产', link: '/Python-demo/CMDB7'},
-            {text: '8.已上线资产更新', link: '/Python-demo/CMDB8'},
-            {text: '9.前端框架AdminLTE', link: '/Python-demo/CMDB9'},
-            {text: '10.资产总表', link: '/Python-demo/CMDB10'},
-            {text: '11.资产详细页面', link: '/Python-demo/CMDB11'},
-            {text: '12.dashboard仪表盘', link: '/Python-demo/CMDB12'},
+            {text: '1.项目需求分析', link: '/python-demo/CMDB1'},
+            {text: '2.模型设计', link: '/python-demo/CMDB2'},
+            {text: '3.数据收集客户端', link: '/python-demo/CMDB3'},
+            {text: '4.收集Windows数据', link: '/python-demo/CMDB4'},
+            {text: '5.Linux下收集数据', link: '/python-demo/CMDB5'},
+            {text: '6.新资产待审批区', link: '/python-demo/CMDB6'},
+            {text: '7.审批新资产', link: '/python-demo/CMDB7'},
+            {text: '8.已上线资产更新', link: '/python-demo/CMDB8'},
+            {text: '9.前端框架AdminLTE', link: '/python-demo/CMDB9'},
+            {text: '10.资产总表', link: '/python-demo/CMDB10'},
+            {text: '11.资产详细页面', link: '/python-demo/CMDB11'},
+            {text: '12.dashboard仪表盘', link: '/python-demo/CMDB12'},
 
           ]
         },
