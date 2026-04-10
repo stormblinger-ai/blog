@@ -18,7 +18,7 @@ hero:
       link: https://github.com/stormblinger-ai
     - theme: alt
       text: 原子商城
-      link: https://dcnuzc4xiyjn.feishu.cn/wiki/Nsl0wzlMgie7hDk4Bc5csKWznHe
+      link: https://dcnuzc4xiyjn.feishu.cn/wiki/Nsl0wzlMgie7hDk4Bc5csKWznHe?from=from_copylink
 features:
   - title: Python视频课
     details: 从Python开始
