@@ -16,7 +16,7 @@ hero:
     - theme: alt
       text: Gitub
       link: https://github.com/stormblinger-ai
-     - theme: brand
+    - theme: brand
       text: 原子商城
       link: https://dcnuzc4xiyjn.feishu.cn/wiki/Nsl0wzlMgie7hDk4Bc5csKWznHe
       target: _self
